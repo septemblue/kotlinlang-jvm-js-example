@@ -5,7 +5,7 @@ import io.ktor.server.routing.*
 import plugins.configureRouting
 
 fun main() {
-    embeddedServer(Netty, port = 8080, host="localhost", module = Application::module).start(wait = true)
+    embeddedServer(Netty, port = 8080, host = "localhost", module = Application::module).start(wait = true)
 }
 
 fun Application.module() {
