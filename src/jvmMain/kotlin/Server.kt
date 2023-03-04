@@ -7,6 +7,7 @@ import io.ktor.server.plugins.compression.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.routing.*
+import kotlinx.serialization.json.Json
 import plugins.configureRouting
 
 fun main() {
@@ -15,7 +16,10 @@ fun main() {
 
 fun Application.module() {
     install(ContentNegotiation) {
-        json()
+        json(Json {
+            prettyPrint = true
+            isLenient = true
+        })
     }
     install(CORS) {
         allowMethod(HttpMethod.Get)
