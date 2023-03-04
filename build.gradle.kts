@@ -29,6 +29,9 @@ kotlin {
             binaries.executable()
         }
     }
+//    Each source set also corresponds to a folder in the src directory. In your project, 
+//    there are three folders, commonMain, jsMain, and jvmMain, which contain their own resources and kotlin folders.
+
     sourceSets {
         val commonMain by getting {
             dependencies {
