@@ -50,6 +50,12 @@ kotlin {
         val jvmMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-serialization:$ktorVersion")
+//                // https://mvnrepository.com/artifact/io.ktor/ktor-client-content-negotiation-jvm
+//                implementation("io.ktor:ktor-client-content-negotiation-jvm:2.2.4")
+//                // https://mvnrepository.com/artifact/io.ktor/ktor-server-cors-jvm
+//                implementation("io.ktor:ktor-server-cors-jvm:2.2.4")
+//                // https://mvnrepository.com/artifact/io.ktor/ktor-server-compression-jvm
+//                implementation("io.ktor:ktor-server-compression-jvm:2.2.4")
                 implementation("io.ktor:ktor-server-content-negotiation:$ktorVersion")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
                 implementation("io.ktor:ktor-server-cors:$ktorVersion")
